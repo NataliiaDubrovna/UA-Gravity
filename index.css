@@ -4,18 +4,15 @@
     border: 0px;
 }
 *,*::before,*::after{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing:border-box;
 } 
+a{
+    cursor: pointer;
+}
 input,button,textarea {font-family: inherit;}
 
-body{
-    height: 2000px;
-}
-body._lock{
-    overflow: hidden;
-}
+body._lock{ overflow: hidden;}
+h1{ margin: 0;}
 
 .header{
     background: linear-gradient(180deg, #010101 -17.5%, rgba(1, 1, 1, 0) 100%);
@@ -27,6 +24,7 @@ body._lock{
 }
 .container{
     max-width: 75%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -50,7 +48,7 @@ body._lock{
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
 }
-.nav_link:hover,.nav_link:active,.lang_link{
+.nav_link:hover,.nav_link:active{
     color: #fff;
     font-weight: 600;
     transition: color 0.2s linear;
@@ -81,6 +79,7 @@ body._lock{
     }
 }
 
+
 @media (max-width: 1250px){
     .container {
         max-width: 970px;
@@ -91,12 +90,6 @@ body._lock{
         max-width: 750px;
     }
 }
-@media (max-width: 767px){
-    .container {
-        max-width: none;
-    }
-}
-
 
 
 @media (max-width: 767px){
@@ -195,11 +188,15 @@ body._lock{
         position: relative;
         z-index: 9;
     }
+    .lang_link{
+        font-weight: 500;
+        color: #fff;
+        transition: color 0.2s linear;
+    }
 }
 
 
-
-
+/*========LOGO======================*/
 
 
 
@@ -208,37 +205,96 @@ body._lock{
     display: block;
     top: 0px;
     left: 0px;
-    z-index: -5;
+    /* z-index: -5;  cursor pointer not working ,why?*/
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
-    width: 100%;
+    background-position: 50% 50%, center; /* not shire is ot okay*/
+    max-width: 100%;
+}
+
+.inner_banner{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
     height: 700px;
 }
+
 .logo_title{
-    position: absolute;
+    text-align: center;
     text-transform: uppercase;
-    font-family: Oswald;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 64px;
-    line-height: 64px;
-    letter-spacing: 0.03em;
+    font-family: 'Oswald', sans-serif;
     color: #fff;
-    margin-top: 227px;
-    max-width: 100%;
     
+}
+.logo_button{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px auto;
+    text-decoration: none;
+}
+.arrow_down{
+   margin: 128px auto 0px;
 }
 
 @media (min-width:767px){
     .logo_banner{
         background-image: url(img/background_camera.png);
     }
+    .logo_title{
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 64px;
+        letter-spacing: 0.03em;
+        margin: 227px auto 0px;
+    }
+    .logo_text{
+        padding: 16px 0px 32px 0px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 144%;
+        text-align: center;
+        color: #FFFFFF;
+        max-width: 683px;
+        margin: 0 auto;
+    }
+    .logo_button{
+        width: 262px;
+        padding: 16px;
+        background: #FFF;
+        font-family: 'Montserrat',sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 133%;
+        color: #010101;
+    }
+    
 }
-
 
 @media (max-width: 767px){
     .logo_banner{
         background-image: url(img/back_camera_phone.png);
+    }
+    .logo_title{
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: 0.03em;
+        margin: 237px auto 0px;
+    }
+    .logo_text{
+        display: none;
+    }
+    .logo_button{
+        width: 189px;
+        height: 42px;border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: #FFFFFF;
+        padding: 13px 12px 11px 12px;
+        margin: 32px auto;
     }
 }
