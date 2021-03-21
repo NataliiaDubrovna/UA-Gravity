@@ -9,6 +9,9 @@
 a{
     cursor: pointer;
 }
+body{
+    height: 1000px;
+}
 input,button,textarea {font-family: inherit;}
 
 body._lock{ overflow: hidden;}
@@ -196,7 +199,7 @@ h1{ margin: 0;}
 }
 
 
-/*========LOGO======================*/
+/*========LOGO  BANNER======================*/
 
 
 
@@ -297,4 +300,56 @@ h1{ margin: 0;}
         padding: 13px 12px 11px 12px;
         margin: 32px auto;
     }
+}
+
+/*========================fixed_button======================*/
+
+@media (min-width:767px){
+.social_buttons{
+    display: flex;
+    transform: rotate(-90deg);
+    position: fixed;
+    bottom: 55%;
+    right: -80px; 
+}
+.fixed_button{
+    font-family: 'Oswald',sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 167%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFF;
+    background: #010101;
+    text-decoration: none;
+    text-align: center;
+    margin: 0px 1px;
+    padding: 6px;
+}
+/*
+.instagram{
+    padding: 6px;
+}
+.instagram:hover{
+    padding-bottom:  20px ;
+}
+.youtube{
+    padding: 6px;
+}
+.youtube:hover{
+    padding-bottom:  20px ;
+}
+.fakebook {
+    padding: 6px;
+}
+.fakebook:hover{
+    padding-bottom:  20px ;
+}
+*/
+
+@media (max-width: 767px){
+    .social_buttons{
+        display: none;
+    }
+
 }
