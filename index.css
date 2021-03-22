@@ -342,11 +342,6 @@ h1{ margin: 0;}
 
 /*======================INFORMATION BLOCK=======================*/
 
-.information_block{
-    height: 639px;
-    width: 100%;
-    background-color: #010101;
-}
 .numbers_result{
     margin:0 auto;
     display: flex;
@@ -388,7 +383,16 @@ h1{ margin: 0;}
     bottom: 0px;
 }
 
+/*@media(min-width: 1273px){
+    flex-basis: 50%;
+}*/
+
 @media (min-width: 767px){
+    .information_block{
+        height: 639px;
+        width: 100%;
+        background-color: #010101;
+    }
     .numbers_result{
         padding-top: 120px;
     }
@@ -438,6 +442,11 @@ h1{ margin: 0;}
 
 
 @media (max-width: 767px){
+    .information_block{
+        height: 802px;
+        width: 100%;
+        background-color: #010101;
+    }
     .numbers_result{
         padding: 56px 16px 0px 16px;
     }
@@ -494,7 +503,7 @@ h1{ margin: 0;}
     display: flex;
     justify-content: space-around;
     padding-top: 121px;
-    position: relative;
+    /*position: relative;*/
     /* flex-wrap: wrap; */
 }
 .photo{
@@ -512,7 +521,9 @@ h1{ margin: 0;}
     margin: 0 16px;
     position: relative;
 }
-.photo_result::before{
+.photo_result_one::before,
+.photo_result_two::before, 
+.photo_result_three::before{
     content: '';
     background: linear-gradient(360deg, #010101 -16.15%, rgba(1, 1, 1, 0) 104.17%);
     opacity: 0.8;
@@ -522,27 +533,55 @@ h1{ margin: 0;}
     left: 0px;
     width: 100%;
     margin: 0 auto;
-    z-index: 20;
+    /*z-index: 2;*/
 }
 
 .text{
     font-family: 'Oswald',sans-serif;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 160%;
-    text-align: right;
     text-transform: uppercase;
     color: #FFFFFF;
     position: absolute;
     bottom: 12px;
-    z-index: 200;
+    left: 50%;
+    transform:translate(-50%);
+    z-index: 2;
 }
-.text_1{
-    left:26%;
+
+@media (min-width: 767px){
+    .photo_result{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 121px;
+        position: relative;
+        /* flex-wrap: wrap; */
+    }
+    .text{
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 160%;
+    }
 }
-.text_2{
-    left:11.5%;
+
+@media (max-width: 767px){
+    .photo_result_one,
+    .photo_result_two, 
+    .photo_result_three {
+        max-height: 152px;
+        margin: 12px;
 }
-.text_3{
-    left: 19.6%;
-}     /* not responsive */
+    .photo_result{
+        display: flex;
+        flex-direction: column;
+        padding-top: 56px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    .text{
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 137%;
+        letter-spacing: 0.03em;
+    }
+
+}
