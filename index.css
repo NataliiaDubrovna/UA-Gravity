@@ -258,6 +258,20 @@ h1{ margin: 0;}
     margin: 128px auto 0px;
 }
 
+@media(max-width: 1249px){
+    .logo_title{
+        font-size: calc(40px + (64 - 40)*((100vw - 767px)/(1200 -767)));
+        line-height: calc(125% + (144 - 125)*((100vw - 767px)/(1200 -767)));
+    }
+    .logo_button{
+        font-size: calc(14px + (18 - 14)*((100vw - 767px)/(1200 -767)));
+    }
+    .logo_text{
+        font-size: calc(14px + (18 - 14)*((100vw - 767px)/(1200 -767)));
+    }
+    
+}
+
 @media (max-width: 767px){
     .logo_banner{
         background-image: url(img/back_camera_phone.png);
@@ -555,14 +569,14 @@ h1{ margin: 0;}
 
 @media(max-width: 1249px){
     .photo_result{
-    padding-top: calc(56px + (121 - 56)*((100vw - 767px)/(1249 -767)));;
+    padding-top: calc(56px + (121 - 56)*((100vw - 767px)/(1249 -767)));
     }
     .photo_res_all {
         max-height: calc(152px + (214 - 152)*((100vw - 767px)/(1249 -767)));
         margin: 12px;
     }
     .text{
-        font-size: calc(32px + (40 - 32)*((100vw - 767px)/(1249 -767)));;
+        font-size: calc(32px + (40 - 32)*((100vw - 767px)/(1249 -767)));
     }
 }
 
