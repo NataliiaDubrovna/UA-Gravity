@@ -679,7 +679,6 @@ h1{ margin: 0;}
     position: absolute;
     top: 0px;
     left: 0px;
-
 }
 .history_img{
     object-fit: cover;
@@ -705,7 +704,14 @@ h1{ margin: 0;}
         width: 480px;
         height: auto;
     }
+    .history_photo_block::before{
+        display: none;
+    }
+    
 }
+
+
+
 
 @media (max-width:650px){
     .history_block{
@@ -746,6 +752,10 @@ h1{ margin: 0;}
     .history_img{
         display: none;
     }
+    .history_photo_block::before{
+        display: none;
+    }
+    
 }
 
 /*=======JHJK
