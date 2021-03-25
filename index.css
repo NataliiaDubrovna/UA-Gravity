@@ -697,7 +697,11 @@ h1{ margin: 0;}
     height: 100%; 
     object-position: center;
 }
-
+@media(max-width:1249px){
+    .history_title{
+        margin-top: 0;
+    }
+}
 
 @media (max-width:993px) {
     .history_text_inner{
@@ -716,9 +720,6 @@ h1{ margin: 0;}
         height: auto;
         position: relative;
     }
-   /* .history_photo_block::before{
-        display: none;
-    }*/
     .history_photo_block::before{
         content: '';
         background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
@@ -728,6 +729,10 @@ h1{ margin: 0;}
         position: absolute;
         top: 0px;
         left: 0px;
+    }
+    .history_title{
+        margin-top: 9%;
+        margin-left: 16px;
     }
 }
 
@@ -747,7 +752,7 @@ h1{ margin: 0;}
         width: 100%;
     }
     .history_title{
-        color: red;
+        color:#FFF;
         font-size: 18px;
         line-height: 189%;
         margin-bottom: 16px;
@@ -785,6 +790,7 @@ h1{ margin: 0;}
     }
     .history_title{
         margin-top: 50px;
+        margin-left: 16px;
     }
     .history_img{
         display: none;
