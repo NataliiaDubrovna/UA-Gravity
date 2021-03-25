@@ -747,7 +747,7 @@ h1{ margin: 0;}
         width: 100%;
     }
     .history_title{
-        color: rebeccapurple;
+        color: red;
         font-size: 18px;
         line-height: 189%;
         margin-bottom: 16px;
@@ -756,11 +756,12 @@ h1{ margin: 0;}
     }
     .history_photo_block{
         background-image: url(img/content4\ for\ phone.png);
-        background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: right;
+        background-position: 100% 50%;
         position: absolute;
-        right: 0;
+        right: 0px;
         top: auto;
         width: calc(340px + (652 - 340)*((100vw - 340px)/(650-340)));
         height: 560.87px;
@@ -784,6 +785,12 @@ h1{ margin: 0;}
     }
     .history_title{
         margin-top: 50px;
+    }
+    .history_img{
+        display: none;
+    }
+    .history_photo_block::before{
+        display: none;
     }
 }
 
