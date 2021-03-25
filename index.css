@@ -459,13 +459,12 @@ h1{ margin: 0;}
         height: calc(61px + (105 - 61)*((100vw - 767px)/(1249 -767)));
     }
 
-    
 }
 
 
 @media (max-width: 768px){
     .information_block{
-        height: 802px;
+        height: 790px;
         width: 100%;
         background-color: #010101;
     }
