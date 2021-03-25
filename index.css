@@ -423,7 +423,7 @@ h1{ margin: 0;}
     color: #FFFFFF;
 }
 
-@media(max-width: 1249px){
+@media(max-width: 1250px){
 
     .information_block{
         height: calc(500px + (639 - 500)*((100vw - 767px)/(1249 -767))); ;
@@ -595,13 +595,13 @@ h1{ margin: 0;}
 }
 
 
-@media (max-width: 767px){
+@media (max-width: 768px){
     
     .photo_res_all {
         max-height: 152px;
         margin: 5px;
-        max-height: calc(152px + (214 - 152)*((100vw - 340px)/(767-340)));
-        max-width: calc(330px + (340 - 330)*((100vw - 340px)/(767-340)));;
+        max-height: calc(152px + (214 - 152)*((100vw - 340px)/(768-340)));
+        max-width: calc(330px + (340 - 330)*((100vw - 340px)/(768-340)));;
 }
     .photo_result{
         display: flex;
@@ -624,9 +624,6 @@ h1{ margin: 0;}
         line-height: 137%;
         letter-spacing: 0.03em;
     }
-
-}
-@media (max-width :340px){
 
 }
 /*========== Cursor pointer =========*/
