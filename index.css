@@ -219,7 +219,6 @@ h1{ margin: 0;}
 .inner_banner{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 700px;
 }
 
@@ -232,11 +231,12 @@ h1{ margin: 0;}
     font-size: 64px;
     line-height: 64px;
     letter-spacing: 0.03em;
-    margin: 227px auto 0px;
+    margin: 0px auto 16px;
+    padding-top: 227px;
     
 }
 .logo_text{
-    padding: 16px 0px 32px 0px;
+    padding: 0px 0px 0px 0px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 18px;
@@ -244,12 +244,12 @@ h1{ margin: 0;}
     text-align: center;
     color: #FFFFFF;
     max-width: 683px;
-    margin: 0 auto;
+    margin: 0 auto 32px;
 }
 .logo_button{
     text-transform: uppercase;
     text-align: center;
-    margin: 0px auto;
+    margin: 0px auto 128px;
     text-decoration: none;
     width: 262px;
     padding: 16px;
@@ -261,7 +261,7 @@ h1{ margin: 0;}
     color: #010101;
 }
 .arrow_down{
-    margin: 128px auto 0px;
+    margin: 0px auto 0px;
 }
 
 @media(max-width: 1249px){
@@ -358,21 +358,21 @@ h1{ margin: 0;}
     display: flex;
     justify-content: space-around;
     width: 100%;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     padding-top: 120px;
+    margin-bottom: 120px;
 }
 .general_number{
     position: relative;
     box-sizing: border-box;
     display: inline-block;
     flex-shrink: 0; /*?*/
-    margin: 10px ;
     height: 105px;
 }
 .numbers_one, 
 .numbers_two, 
 .numbers_three{
-    margin-right: 40px;
+    margin-right: 40px;/*figured out*/
 }
 .numbers_one{
     width: 215px;
@@ -425,12 +425,13 @@ h1{ margin: 0;}
 }
 
 @media(max-width: 1250px){
-
+ /*!!!!*/
     .information_block{
-        height: calc(500px + (639 - 500)*((100vw - 767px)/(1249 -767))); ;
+        height: calc(400px + (639 - 400)*((100vw - 767px)/(1249 -767))); ;
     }
     .numbers_result{
         padding-top: calc(56px + (120 - 56)*((100vw - 767px)/(1249 -767))); 
+        margin-bottom: calc(56px + (121 - 56)*((100vw - 767px)/(1249 -767)));
     }
     .shadow_text{
         font-size: calc(32px + (40 - 32)*((100vw - 767px)/(1249 -767)));
@@ -464,7 +465,7 @@ h1{ margin: 0;}
 
 @media (max-width: 768px){
     .information_block{
-        height: 790px;
+        height: 802px;
         width: 100%;
         background-color: #010101;
     }
@@ -472,11 +473,14 @@ h1{ margin: 0;}
         padding: 56px 16px 0px 16px;
         justify-content: space-around;
         flex-wrap: wrap;
+        margin-bottom: 0px;
+        
     }
     .general_number{
         height: 61px;
         margin: 0px ;
         display: inline-block;
+        margin: 10px;
     }
     .numbers_one, 
     .numbers_two, 
@@ -521,9 +525,6 @@ h1{ margin: 0;}
     }
 }
 
-/* shrink by 2  */
-
-
 
 /*=========== PHOTO RESULT ===========*/
 
@@ -531,9 +532,11 @@ h1{ margin: 0;}
 
 .photo_result{
     display: flex;
-    justify-content: center;
-    padding-top: 121px;
+    justify-content: space-between;
+   /* padding-top: 120px;*/
     flex-wrap: nowrap;
+    width: 100%;
+    margin-bottom: 78px;
        
     /*position: relative;*/
     /* flex-wrap: wrap; */
@@ -548,9 +551,14 @@ h1{ margin: 0;}
     width: 342px;
     height: auto;
     overflow: hidden;
-    margin: 0 16px;
+    /*margin: 0px 5px 0px 0px;*/
     position: relative;
 }
+.photo_result_one,
+.photo_result_two{
+    margin-right: 10px;
+}
+
 .photo_result_one::before,
 .photo_result_two::before, 
 .photo_result_three::before{
@@ -562,7 +570,7 @@ h1{ margin: 0;}
     top: 0px;
     left: 0px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto ;
     /*z-index: 2;*/
 }
 
@@ -583,11 +591,7 @@ h1{ margin: 0;}
 
 @media(max-width: 1249px){
     .photo_result{
-    padding-top: calc(56px + (121 - 56)*((100vw - 767px)/(1249 -767)));
-    }
-    .photo_res_all {
-        max-height: calc(152px + (214 - 152)*((100vw - 767px)/(1249 -767)));
-        margin: 12px;
+        margin-bottom: calc(10px + (78 - 10)*((100vw - 767px)/(1249 -767))); 
     }
     .text{
         font-size: calc(32px + (40 - 32)*((100vw - 767px)/(1249 -767)));
@@ -596,12 +600,10 @@ h1{ margin: 0;}
 
 
 @media (max-width: 768px){
-    
     .photo_res_all {
-        max-height: 152px;
-        margin: 5px;
-        max-height: calc(152px + (214 - 152)*((100vw - 340px)/(768-340)));
+        margin: 0px 16px 12px;
         max-width: calc(330px + (340 - 330)*((100vw - 340px)/(768-340)));
+        max-height:180px ;
     }
     .photo_result{
         display: flex;
@@ -611,6 +613,7 @@ h1{ margin: 0;}
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        margin-bottom: 44px;
     }
     .photo{
         object-fit: cover;
@@ -624,23 +627,35 @@ h1{ margin: 0;}
         line-height: 137%;
         letter-spacing: 0.03em;
     }
-
 }
-@media (max-width: 340px){
+@media (max-width:689px){
+    .photo_res_all {
+        max-height: 152px; 
+    }
+    .photo_result{
+        margin-bottom: 44px;
+    }
+    
+}
+
+@media (max-width: 369px){
+    .information_block{
+        height: 922px;
+    }
     .photo_res_all {
         max-height: 152px;
         margin: 5px;
         max-width: 310px;
     }
-    .text_3{
-        bottom: 50px ;
+    .photo_result{
+        margin-bottom: 44px;
     }
 }
 
 /*============= History_block ==============*/
 
 .history_block{
-    height: 700px;
+    height: 754px;
     background-color:  #010101;
 }
 .history_block_inner{
@@ -653,9 +668,8 @@ h1{ margin: 0;}
     line-height: 121%;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin-bottom: 2.5% ;
-    margin-left: 8.2% ;
-    margin-top: 9.2% ;
+    margin-bottom: 32px;
+    padding-top: 66px;
 }
 .history_text{
     width: 59%;
@@ -667,9 +681,7 @@ h1{ margin: 0;}
     line-height: 162%;
     color: #FFFFFF;
     display: inline-block;
-    margin-left: 8.2% ;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     text-align: left;
     margin-right: 40px;
 }
@@ -677,7 +689,7 @@ h1{ margin: 0;}
     width: 565px;
     height: 627px ;
     overflow: hidden;
-    margin-top:3.7% ;
+    margin-top: 42px ;
     position: relative;
 }
 .history_photo_block::before{
@@ -696,23 +708,18 @@ h1{ margin: 0;}
     height: 100%; 
     object-position: center;
 }
-@media(max-width:1249px){
-    .history_title{
-        margin-top: 0;
-    }
-}
+
 
 @media (max-width:993px) {
+
     .history_text_inner{
         font-weight: 500;
         font-size: 14px;
         line-height: 157%;
-
-        margin-left: 16px ;
-        margin-top: 12px;
-        margin-bottom: 12px;
+        margin-bottom: 24px;
         text-align: left;
         margin-right: 10px;
+        padding-left: 16px;
     }
     .history_photo_block{
         width: 480px;
@@ -730,16 +737,24 @@ h1{ margin: 0;}
         left: 0px;
     }
     .history_title{
-        margin-top: 9%;
-        margin-left: 16px;
+        padding-top: calc(1px + (66 - 1)*((100vw - 780px)/(993-780)));
+        padding-left: 16px;
+    }
+    .history_block{
+        height: 640px;
     }
 }
 
+@media (max-width:767px){
+    .history_block{
+        height: 704px;
+    }
+}
 
 @media (max-width:650px){
     .history_block{
         position: relative;
-        height: 650px;
+        height: 600px;  
     }
     .history_text{
         position: absolute;
@@ -755,7 +770,6 @@ h1{ margin: 0;}
         font-size: 18px;
         line-height: 189%;
         margin-bottom: 16px;
-        margin-left: 16px;
         margin-top: 0px;
     }
     .history_photo_block{
@@ -782,6 +796,12 @@ h1{ margin: 0;}
     }
 }
 
+@media (max-width:420px){
+    .history_block{
+        height: 650px; /*610 by maket*/
+    }
+}
+
 @media (max-width: 340px){
     .history_block{
         height: 800px;
@@ -789,7 +809,6 @@ h1{ margin: 0;}
     }
     .history_title{
         margin-top: 50px;
-        margin-left: 16px;
     }
     .history_img{
         display: none;
@@ -799,4 +818,82 @@ h1{ margin: 0;}
     }
 }
 
-/*=======JHJK==========*/
+/*===============GALARY BLOCK================*/
+
+.galary_block{
+    background-color: #010101;
+}
+.galary_fotos{
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 40px;
+    
+}
+.photo_all{
+    /*overflow: hidden;*/
+}
+.galary_block .galary_fotos .photo_all img{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+.galary_block .galary_fotos .photo_all:first-child{
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+.galary_block .galary_fotos {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.4%;
+    grid-auto-flow: dense;
+}
+.galary_block .galary_fotos .photo_all img:hover{
+    filter:linear-gradient(360deg, #010101 -16.15%, rgba(1, 1, 1, 0) 104.17%);
+    opacity: 0.8;;
+}
+
+.galary_button{
+    margin: 0px auto;
+    margin-bottom: 120px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;    
+    padding: 11px 16px;
+    border:#fff solid 1px;
+    background-color: #010101;
+    display: inline-block;
+}
+
+
+
+/*.photo_1{
+    max-width: 66.6%;
+    max-height: 66.5;
+    margin-right: 0.1%;
+    margin-bottom: 0.4%;
+}
+.photo_2,
+.photo_3 {
+    max-width: 33.3%;
+    max-height: 33.1%;
+    margin-bottom: 0.35%;
+}
+.photo_4,
+.photo_5,
+.photo_6{
+    max-width: 33.2%;
+    max-height: 33.1%;
+}
+.photo_4{
+    margin-right: 0.2%;
+}
+.photo_5{
+    margin-right: 0.1%;
+}*/
