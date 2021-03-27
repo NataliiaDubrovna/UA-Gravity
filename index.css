@@ -631,6 +631,7 @@ h1{ margin: 0;}
 @media (max-width:689px){
     .photo_res_all {
         max-height: 152px; 
+     /* margin: 0px 16px 12px; should do*/
     }
     .photo_result{
         margin-bottom: 44px;
@@ -646,6 +647,7 @@ h1{ margin: 0;}
         max-height: 152px;
         margin: 5px;
         max-width: 310px;
+        /* margin: 0px 16px 12px; should do*/
     }
     .photo_result{
         margin-bottom: 44px;
@@ -828,11 +830,8 @@ h1{ margin: 0;}
     width: 100%;
     height: auto;
     margin: 0 auto 40px;
-    
 }
-.photo_all{
-    /*overflow: hidden;*/
-}
+
 .galary_block .galary_fotos .photo_all img{
     overflow: hidden;
     height: 100%;
@@ -889,7 +888,7 @@ h1{ margin: 0;}
     opacity: 1;
 }
 
-.photo_all .photo_title_text{
+#first_title{
     position: relative;
     font-family:'Oswald',sans-serif;
     font-weight: normal;
@@ -900,26 +899,8 @@ h1{ margin: 0;}
     color: #FFFFFF;
     margin-bottom: 16px;
 }
-/*
-.photo_2_block.photo_title_text{
-    position: relative;
-    font-family:'Oswald',sans-serif;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 140%;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin-bottom: 16px;
-}*/
 
-.photo_title .title_bar{
-    width: 240.25px;
-    height: 1px;
-    background-color: #fff;
-    margin-bottom: 16px;
-}
-.photo_title_button{
+#first_button{
     background: #FFFFFF;
     font-family: 'Raleway',sans-serif;
     font-weight: 500;
@@ -928,6 +909,37 @@ h1{ margin: 0;}
     text-transform: uppercase;
     color: #010101;
     padding: 12px 11.5px;
+    cursor: pointer;
+    }
+
+
+.photo_all .photo_title_text{
+    position: relative;
+    font-family:'Oswald',sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.photo_title .title_bar{
+    width: 240.25px;
+    height: 1px;
+    background-color: #fff;
+    margin-bottom: 16px;
+}
+.photo_title .photo_title_button{
+    background: #FFFFFF;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 171%;
+    text-transform: uppercase;
+    color: #010101;
+    padding: 10px;
     cursor: pointer;
     }
 
@@ -944,32 +956,110 @@ h1{ margin: 0;}
     padding: 11px 16px;
     border:#fff solid 1px;
     background-color: #010101;
-    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+@media (max-width:1110px){
+    
+    .photo_all .photo_title_text{
+         font-size: 20px;
+         margin-bottom: 14px;
+    }
+    .photo_title .photo_title_button{
+        font-size: 11px;
+    }
+    .photo_title .title_bar{
+        width: 220.25px;
+        margin-bottom: 14px;
+    }
+    .galary_button{
+        margin-bottom: 100px;
+    }
+}
+@media (max-width:970px){
+    
+    .photo_all .photo_title_text{
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+    .photo_title .photo_title_button{
+        font-size: 10px;
+    }
+    .photo_title .title_bar{
+        width: 200.25px;
+        margin-bottom: 12px;
+    }
+    .galary_button{
+        margin-bottom: 80px;
+    }
 }
 
 
+@media (max-width: 768px){
+    .galary_block .galary_fotos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .photo_all{
+        margin: 0px 16px 12px 16px;
+    }
+    .photo_1_block{
+        order: 1;
+        margin-top: 40px;
+    }
+    .photo_2_block{
+        order: 4;
+    }
+    .photo_3_block{
+        display: none;
+        
+    }
+    .photo_4_block{
+        order: 5;
+        margin-bottom: 0px;
+    }
+    .photo_5_block{
+        order: 2;
+    }
+    .photo_6_block{
+        order: 3;
+    }
+    .photo_title .photo_title_button{
+        display: none;
+    }
+    .photo_title .title_bar {
+        display: none;
+    }
+    .galary_block .galary_fotos .photo_all::before{
+        opacity: 1;
+    }
+    .galary_block .galary_fotos .photo_all .photo_title{
+        opacity: 1;
+    }
+    .galary_fotos{
+        margin: 0 auto 24px;
+    }
+    #first_title , 
+    .photo_all .photo_title_text{
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    .galary_button{
+        margin: 0px auto;
+        margin-bottom: 56px;
+        font-size: 16px;
+        line-height: 150%;
+        padding: 4px 24px;
+    }
 
-/*.photo_1{
-    max-width: 66.6%;
-    max-height: 66.5;
-    margin-right: 0.1%;
-    margin-bottom: 0.4%;
 }
-.photo_2,
-.photo_3 {
-    max-width: 33.3%;
-    max-height: 33.1%;
-    margin-bottom: 0.35%;
-}
-.photo_4,
-.photo_5,
-.photo_6{
-    max-width: 33.2%;
-    max-height: 33.1%;
-}
-.photo_4{
-    margin-right: 0.2%;
-}
-.photo_5{
-    margin-right: 0.1%;
-}*/
+
+/*===========next block===========*/
+
+
+
+
+
