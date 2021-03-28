@@ -19,7 +19,7 @@ body._lock{ overflow: hidden;}
 h1{ margin: 0;}
 
 
-/*================HEADER==================*/
+/*===================== HEADER ====================*/
 .header{
     background: linear-gradient(180deg, #010101 -17.5%, rgba(1, 1, 1, 0) 100%);
     position: fixed;
@@ -89,15 +89,12 @@ h1{ margin: 0;}
         max-width: 750px;
     }
 }
-
-
 @media (max-width: 767px){
     .header_inner{
         display: flex;
         justify-content: flex-end;
         align-items: center;
     }
-    
     .header
     .menu_icon{
         z-index: 15;
@@ -106,13 +103,11 @@ h1{ margin: 0;}
         height: 18px;
         width: 30px;
         cursor: pointer;
-    
     }
     .header_logo{
         padding: 2px 16px;
         margin-right: auto;
     }
-   
     .menu_icon span,
     .menu_icon::before,
     .menu_icon::after{
@@ -123,7 +118,6 @@ h1{ margin: 0;}
         background-color: #fff;
         transition: all 0.3 ease 0s;
     }
-
     .menu_icon::before,
     .menu_icon::after{
         content: '';
@@ -154,7 +148,6 @@ h1{ margin: 0;}
     .menu_icon{
         display: inline-block;
     }
-
     .nav_list{
         position: fixed;
         left:-100%;
@@ -196,12 +189,10 @@ h1{ margin: 0;}
         color: #fff;
         transition: color 0.2s linear;
     }
-
-
 }
 
 
-/*======== LOGO  BANNER ======================*/
+/*================== LOGO  BANNER ======================*/
 
 .logo_banner{
     position: relative;
@@ -215,13 +206,11 @@ h1{ margin: 0;}
     max-width: 100%;
     background-image: url(img/background_camera.png);
 }
-
 .inner_banner{
     display: flex;
     flex-direction: column;
     height: 700px;
 }
-
 .logo_title{
     text-align: center;
     text-transform: uppercase;
@@ -263,7 +252,6 @@ h1{ margin: 0;}
 .arrow_down{
     margin: 0px auto 0px;
 }
-
 @media(max-width: 1249px){
     .logo_title{
         font-size: calc(40px + (64 - 40)*((100vw - 767px)/(1200 -767)));
@@ -277,7 +265,6 @@ h1{ margin: 0;}
     }
     
 }
-
 @media (max-width: 767px){
     .logo_banner{
         background-image: url(img/back_camera_phone.png);
@@ -287,14 +274,15 @@ h1{ margin: 0;}
         font-size: 40px;
         line-height: 50px;
         letter-spacing: 0.03em;
-        margin: 237px auto 0px;
+        margin: 0px auto 0px;
     }
     .logo_text{
         display: none;
     }
     .logo_button{
         width: 189px;
-        height: 42px;border: 1px solid #FFFFFF;
+        height: 42px;
+        border: 1px solid #FFFFFF;
         box-sizing: border-box;
         font-family: 'Raleway', sans-serif;
         font-weight: 500;
@@ -332,13 +320,10 @@ h1{ margin: 0;}
     margin: 0px 1px;
     padding: 6px;
 }
-
 .fixed_button:hover{
     font-weight: 500;
     transition: all 0.3s ease;/*trigger on hower why*/
 }
-
-
 @media (max-width: 767px){
     .social_buttons{
         display: none;
@@ -346,7 +331,6 @@ h1{ margin: 0;}
 }
 
 /*======================INFORMATION BLOCK=======================*/
-
 
 .information_block{
     height: 639px;
@@ -386,7 +370,6 @@ h1{ margin: 0;}
 .numbers_four{
     width: 286px;
 }
-
 .shadow_text{
     position: absolute;
     z-index: 1;
@@ -423,7 +406,6 @@ h1{ margin: 0;}
     line-height: 112%;
     color: #FFFFFF;
 }
-
 @media(max-width: 1250px){
  /*!!!!*/
     .information_block{
@@ -459,10 +441,7 @@ h1{ margin: 0;}
     .general_number{
         height: calc(61px + (105 - 61)*((100vw - 767px)/(1249 -767)));
     }
-
 }
-
-
 @media (max-width: 768px){
     .information_block{
         height: 802px;
@@ -486,7 +465,7 @@ h1{ margin: 0;}
     .numbers_two, 
     .numbers_three{
         margin-right: 10px;
-}
+    }
     .shadow_text{
         font-family: 'Oswald',sans-serif;
         font-weight: 700;
@@ -524,8 +503,6 @@ h1{ margin: 0;}
         width: 170px;
     }
 }
-
-
 /*=========== PHOTO RESULT ===========*/
 
 /*mobile verson position of photo*/
@@ -546,7 +523,6 @@ h1{ margin: 0;}
     width: 100%;
     height: 100%;    
 }
-
 .photo_res_all {
     width: 342px;
     height: auto;
@@ -558,7 +534,6 @@ h1{ margin: 0;}
 .photo_result_two{
     margin-right: 10px;
 }
-
 .photo_result_one::before,
 .photo_result_two::before, 
 .photo_result_three::before{
@@ -573,7 +548,6 @@ h1{ margin: 0;}
     margin: 0 auto ;
     /*z-index: 2;*/
 }
-
 .text{
     font-family: 'Oswald',sans-serif;
     text-transform: uppercase;
@@ -587,8 +561,6 @@ h1{ margin: 0;}
     font-size: 40px;
     line-height: 160%;
 }
-
-
 @media(max-width: 1249px){
     .photo_result{
         margin-bottom: calc(10px + (78 - 10)*((100vw - 767px)/(1249 -767))); 
@@ -597,8 +569,6 @@ h1{ margin: 0;}
         font-size: calc(32px + (40 - 32)*((100vw - 767px)/(1249 -767)));
     }
 }
-
-
 @media (max-width: 768px){
     .photo_res_all {
         margin: 0px 16px 12px;
@@ -638,7 +608,6 @@ h1{ margin: 0;}
     }
     
 }
-
 @media (max-width: 369px){
     .information_block{
         height: 922px;
@@ -710,8 +679,6 @@ h1{ margin: 0;}
     height: 100%; 
     object-position: center;
 }
-
-
 @media (max-width:993px) {
 
     .history_text_inner{
@@ -746,13 +713,11 @@ h1{ margin: 0;}
         height: 640px;
     }
 }
-
 @media (max-width:767px){
     .history_block{
         height: 704px;
     }
 }
-
 @media (max-width:650px){
     .history_block{
         position: relative;
@@ -797,13 +762,11 @@ h1{ margin: 0;}
         display: none;
     }
 }
-
 @media (max-width:420px){
     .history_block{
         height: 650px; /*610 by maket*/
     }
 }
-
 @media (max-width: 340px){
     .history_block{
         height: 800px;
@@ -820,18 +783,17 @@ h1{ margin: 0;}
     }
 }
 
-/*===============GALARY BLOCK================*/
+/*================== GALARY BLOCK =====================*/
 
 .galary_block{
     background-color: #010101;
 }
 .galary_fotos{
-    max-width: 1440px;
+    /*max-width: 1440px;*/
     width: 100%;
     height: auto;
     margin: 0 auto 40px;
 }
-
 .galary_block .galary_fotos .photo_all img{
     overflow: hidden;
     height: 100%;
@@ -839,7 +801,6 @@ h1{ margin: 0;}
     object-fit: cover;
     transition: 0.5s ease-in-out;
 }
-
 .galary_block .galary_fotos .photo_all:first-child{
     grid-column-start: span 2;
     grid-row-start: span 2;
@@ -887,7 +848,6 @@ h1{ margin: 0;}
 .galary_block .galary_fotos .photo_all .photo_title:hover{
     opacity: 1;
 }
-
 #first_title{
     position: relative;
     font-family:'Oswald',sans-serif;
@@ -899,7 +859,6 @@ h1{ margin: 0;}
     color: #FFFFFF;
     margin-bottom: 16px;
 }
-
 #first_button{
     background: #FFFFFF;
     font-family: 'Raleway',sans-serif;
@@ -910,9 +869,7 @@ h1{ margin: 0;}
     color: #010101;
     padding: 12px 11.5px;
     cursor: pointer;
-    }
-
-
+}
 .photo_all .photo_title_text{
     position: relative;
     font-family:'Oswald',sans-serif;
@@ -924,7 +881,6 @@ h1{ margin: 0;}
     color: #FFFFFF;
     margin-bottom: 16px;
 }
-
 .photo_title .title_bar{
     width: 240.25px;
     height: 1px;
@@ -941,8 +897,7 @@ h1{ margin: 0;}
     color: #010101;
     padding: 10px;
     cursor: pointer;
-    }
-
+}
 .galary_button{
     margin: 0px auto;
     margin-bottom: 120px;
@@ -959,8 +914,8 @@ h1{ margin: 0;}
     left: 50%;
     transform: translateX(-50%);
     position: relative;
+    cursor: pointer;
 }
-
 @media (max-width:1110px){
     
     .photo_all .photo_title_text{
@@ -995,8 +950,6 @@ h1{ margin: 0;}
         margin-bottom: 80px;
     }
 }
-
-
 @media (max-width: 768px){
     .galary_block .galary_fotos {
         display: flex;
@@ -1015,7 +968,6 @@ h1{ margin: 0;}
     }
     .photo_3_block{
         display: none;
-        
     }
     .photo_4_block{
         order: 5;
@@ -1053,11 +1005,114 @@ h1{ margin: 0;}
         font-size: 16px;
         line-height: 150%;
         padding: 4px 24px;
+        cursor: pointer;
     }
+}
+/*================= PARTNERS =======================*/
 
+.partners_block{
+    /*margin-bottom: 120px;*/
+    height: auto;
+}
+.arrows_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 120px;
+    margin-bottom: 48px;
+}
+.partner_logo{
+    font-family: 'Oswald',sans-serif;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 121%;
+    text-transform: uppercase;
+    color: #010101;
+}
+.left_arrow{
+    margin-right: 48px;
 }
 
-/*===========next block===========*/
+.partner_logo_labels{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr  1fr;
+    column-gap: 48px;
+    row-gap: 48px;
+    margin-bottom: 120px;
+}
+.labels_all img{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+@media (max-width:1250px){
+    .partner_logo_labels{
+        column-gap: 35px;
+        row-gap: 35px;
+    }
+}
+@media (max-width:992px){
+    .partner_logo_labels{
+        column-gap: 24px;
+        row-gap: 24px;
+    }
+}
+@media (max-width:970px){
+    .partner_logo_labels{
+        column-gap: 18px;
+        row-gap: 18px;
+    }
+}
+@media (max-width:768px){
+    .arrows_block{
+        padding-top: 0px;
+    }
+    .partners_block{
+        margin: 24px 16px 40px ;
+    }
+    .partner_logo_labels{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr  1fr;
+        margin-bottom: 120px;
+        column-gap: 30px;
+        row-gap: 30px;
+        margin-bottom: 35px;
+    }
+    .right_arrow{
+        padding-right: 15px;
+    }
+    .labels_1{
+        order:4
+    }
+    .labels_2{
+        order: 3;
+    }
+    .labels_3{
+        order: 1;
+    }
+    .labels_4{
+        order: 2;
+    }
+    .labels_5{
+        order: 5;
+    }
+    .labels_6{
+        order: 6;
+    }
+    .labels_7,
+    .labels_8,
+    .labels_9,
+    .labels_10,
+    .labels_11,
+    .labels_12{
+        display: none;
+    }
+    
+}
+
 
 
 
