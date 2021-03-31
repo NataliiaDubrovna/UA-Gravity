@@ -10,7 +10,7 @@ a{
     cursor: pointer;
 }
 body{
-    height: 300vh;
+    height: 100%;
     -webkit-font-smoothing: antialiased;
 }
 input,button,textarea {font-family: inherit;}
@@ -1224,6 +1224,133 @@ h1{ margin: 0;}
         display: none;
     }
 }
+/*======================= Revier=================*/
+.reviews_block{
+    background: #010101;
+    width: 100%;
+    height: auto;
+    padding-top: 120px;
+}
+.reviews_title_block{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 56px;
+}
+.reviews_title{
+    font-family: 'Oswald',sans-serif;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 121%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.left_arrow_white{
+    margin-right: 48px;
+}
+.right_arrow_white{
+    padding-right: 16px;
+}
+.reviews_all{
+    display: flex;
+}
+.reviewer_info{
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+}
+.reviews_1,
+.reviews_2,
+.reviews_3{
+    flex-basis: 33%;
+    height: auto;
+    padding: 2em 2em 1.6em 2em ;
+    margin: 0.1em;
+}
+
+.reviews_2{
+    background: #1E1E1E;
+    color: #FFFFFF;
+
+}
+.reviews_1,
+.reviews_3{
+    background: #C7C7C7;
+    color: #010101;
+}
+.reviewer_name{
+    font-family: 'Oswald',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    margin-bottom: 0.5em; 
+}
+.reviewer_state{
+    font-family: 'Raleway',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 167%;
+    margin-bottom: 1.5em;
+}
+.review_text{
+    font-family: 'Raleway',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+}
+.reviwer_img_container_1{
+    overflow: hidden;
+    max-width: 8.6em;
+    margin-bottom: 1.5em;
+}
+.reviwer_img_container_2{
+    overflow: hidden;
+    max-width: 3em;
+    margin-bottom: 1.25em;
+}
+.reviwer_img_container_3{
+    overflow: hidden;
+    max-width: 5.8em;
+    margin-bottom: 1.25em;
+}
+
+.reviwer_img_container_1 img,
+.reviwer_img_container_2 img,
+.reviwer_img_container_3 img{
+    object-fit: contain;
+    width: 100%;
+}
+@media (max-width:770px){
+    .reviews_3{
+        display: none;
+    }
+    .reviews_1,
+    .reviews_2{
+    flex-basis: 50%;
+    }
+    .reviews_all{
+        padding:0 1em; 
+    }
+    .reviews_title_block{
+        padding:0 1em;    
+    }
+/*general spaces and fonts*/
+}
+@media (max-width:545px){
+    .reviews_1{
+        display: none;
+    }
+    .reviews_2{
+        flex-basis: 100%;
+    }
+}
 
 
-/*==========yugm==========*/
+
+/*===============FOOOTER===============*/
+
+.reviews_block{
+    padding-bottom: 120px;
+} */
