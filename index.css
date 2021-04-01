@@ -19,7 +19,22 @@ body._lock{ overflow: hidden;}
 h1{ margin: 0;}
 
 
+
 /*===================== HEADER ====================*/
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    /*max-width: 79%;*/
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.content{
+    flex:  1 1 auto ;
+}
 .header{
     background: linear-gradient(180deg, #010101 -17.5%, rgba(1, 1, 1, 0) 100%);
     position: fixed;
@@ -27,11 +42,6 @@ h1{ margin: 0;}
     left: 0px;
     width: 100%;
     z-index: 10;
-}
-.container{
-    /*max-width: 79%;*/
-    max-width: 1200px;
-    margin: 0 auto;
 }
 .header_inner{
     display: flex;
@@ -76,8 +86,6 @@ h1{ margin: 0;}
 .lang{
     display: none;
 }
-
-/* ???? */
 
 @media (max-width: 1250px){
     .container {
@@ -1390,11 +1398,79 @@ h1{ margin: 0;}
     .left_arrow_white{
         margin-right: 2.6em;
     }
+    .reviewer_name{
+        font-size: 16px;
+        line-height: 150%;
+    }
 }
+
     
 
 /*==================FOOOTER====================*/
 
-.reviews_block{
-    padding-bottom: 120px;
-} */
+footer .landscape_block{
+    height: 10em;
+    background: linear-gradient(180deg, #010101 11.52%, rgba(41, 40, 40, 0.76) 100%);
+ }
+.footer_inner{
+    background: #010101;
+}
+.footer_inner>.container{
+    position: relative;
+}
+.fotter_img_wrapper{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    }
+
+.footer_flex_inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.6em;
+}
+.nav_list_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_link_footer:not(:last-child){
+    margin-right: 2.5em;
+}
+.nav_link_footer{
+    text-decoration:  none;
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 229%;
+    text-transform: uppercase;
+    color: #C7C7C7;
+    margin-bottom: 2em;
+}
+.nav_link_footer:hover,.nav_link_footer:active{
+    font-weight: 600;
+    color: #FFFFFF;
+    transition: color 0.2s linear;
+}
+.social_block_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+.social_block_footer>a:not(:last-child){
+    margin-right: 3em;
+}
+.UAP_footer{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 200%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 2.2em;
+}
