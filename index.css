@@ -52,7 +52,7 @@ h1{ margin: 0;}
     max-width:100%;
     height: auto;
     padding: 10px 0;
-    display: relative;
+    /* position: relative; */
     z-index: 20;
 }
 .menu_icon{
@@ -123,7 +123,7 @@ h1{ margin: 0;}
         width: 100%;
         height: 10%;
         background-color: #fff;
-        transition: all 0.3 ease 0s;
+        transition: all 0.3 ease-in-out;
     }
     .menu_icon::before,
     .menu_icon::after{
@@ -183,7 +183,7 @@ h1{ margin: 0;}
         margin-bottom: 32px;
     }
     .header{
-        padding: 88px auto;
+        padding: 88px 0px;
     }
     .lang{
         margin-right: 50px;
@@ -261,14 +261,14 @@ h1{ margin: 0;}
 }
 @media(max-width: 1249px){
     .logo_title{
-        font-size: calc(40px + (64 - 40)*((100vw - 767px)/(1200 -767)));
-        line-height: calc(125% + (144 - 125)*((100vw - 767px)/(1200 -767)));
+        font-size: calc(40px + (64 - 40)*((100vw - 767px)/(1200 -767));
+        line-height: calc(125% + (144 - 125)*((100vw - 767px)/(1200 -767));
     }
     .logo_button{
-        font-size: calc(14px + (18 - 14)*((100vw - 767px)/(1200 -767)));
+        font-size: calc(14px + (18 - 14)*((100vw - 767px)/(1200 -767));
     }
     .logo_text{
-        font-size: calc(14px + (18 - 14)*((100vw - 767px)/(1200 -767)));
+        font-size: calc(14px + (18 - 14)*((100vw - 767px)/(1200 -767));
     }
     
 }
@@ -423,30 +423,30 @@ h1{ margin: 0;}
         margin-bottom: calc(56px + (121 - 56)*((100vw - 767px)/(1249 -767)));
     }
     .shadow_text{
-        font-size: calc(32px + (40 - 32)*((100vw - 767px)/(1249 -767)));
-        line-height: calc(112% + (133 - 112)*((100vw - 767px)/(1249 -767)));
+        font-size: calc(32px + (40 - 32)*((100vw - 767px)/(1249 -767));
+        line-height: calc(112% + (133 - 112)*((100vw - 767px)/(1249 -767));
     }
     .brite_text{
-        font-size: calc(16px + (28 - 16)*((100vw - 767px)/(1249 -767)));
-        line-height: calc(125% + (127 - 125)*((100vw - 767px)/(1249 -767)));
+        font-size: calc(16px + (28 - 16)*((100vw - 767px)/(1249 -767));
+        line-height: calc(125% + (127 - 125)*((100vw - 767px)/(1249 -767));
     }
     .number{
-        font-size: calc(44px + (68 - 44)*((100vw - 767px)/(1249 -767)));
+        font-size: calc(44px + (68 - 44)*((100vw - 767px)/(1249 -767));
     }
     .numbers_one{
-        width: calc(132px + (215 - 132)*((100vw - 767px)/(1249 -767)));
+        width: calc(132px + (215 - 132)*((100vw - 767px)/(1249 -767));
     }
     .numbers_two{
-        width: calc(146px + (237 - 146)*((100vw - 767px)/(1249 -767)));
+        width: calc(146px + (237 - 146)*((100vw - 767px)/(1249 -767));
     }
     .numbers_three{
-        width: calc(127px + (297 - 127)*((100vw - 767px)/(1249 -767)));
+        width: calc(127px + (297 - 127)*((100vw - 767px)/(1249 -767));
     }
     .numbers_four{
-        width: calc(183px + (286 - 183)*((100vw - 767px)/(1249 -767)));
+        width: calc(183px + (286 - 183)*((100vw - 767px)/(1249 -767));
     }
     .general_number{
-        height: calc(61px + (105 - 61)*((100vw - 767px)/(1249 -767)));
+        height: calc(61px + (105 - 61)*((100vw - 767px)/(1249 -767));
     }
 }
 @media (max-width: 768px){
@@ -568,16 +568,16 @@ h1{ margin: 0;}
 }
 @media(max-width: 1249px){
     .photo_result{
-        margin-bottom: calc(10px + (78 - 10)*((100vw - 767px)/(1249 -767))); 
+        margin-bottom: calc(10px + (78 - 10)*((100vw - 767px)/(1249 -767)); 
     }
     .text{
-        font-size: calc(32px + (40 - 32)*((100vw - 767px)/(1249 -767)));
+        font-size: calc(32px + (40 - 32)*((100vw - 767px)/(1249 -767));
     }
 }
 @media (max-width: 768px){
     .photo_res_all {
         margin: 0px 16px 12px;
-        max-width: calc(330px + (340 - 330)*((100vw - 340px)/(768-340)));
+        max-width: calc(330px + (340 - 330)*((100vw - 340px)/(768-340));
         max-height:180px ;
     }
     .photo_result{
@@ -710,7 +710,7 @@ h1{ margin: 0;}
         left: 0px;
     }
     .history_title{
-        padding-top: calc(1px + (66 - 1)*((100vw - 780px)/(993-780)));
+        padding-top: calc(1px + (66 - 1)*((100vw - 780px)/(993-780));
         padding-left: 16px;
     }
     .history_block{
@@ -752,7 +752,7 @@ h1{ margin: 0;}
         position: absolute;
         right: 0px;
         top: auto;
-        width: calc(340px + (652 - 340)*((100vw - 340px)/(650-340)));
+        width: calc(340px + (652 - 340)*((100vw - 340px)/(650-340));
         height: 560.87px;
         margin-top: 5%;
     }
