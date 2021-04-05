@@ -183,7 +183,7 @@ h1{ margin: 0;}
         margin-bottom: 32px;
     }
     .header{
-        padding: 88px 0px;
+        /* padding-top: 88px; */
     }
     .lang{
         margin-right: 50px;
