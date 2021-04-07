@@ -1,0 +1,137 @@
+/*================== LOGO  BANNER ======================*/
+
+.logo-banner{
+    position: relative;
+    display: block;
+    top: 0px;
+    left: 0px;
+    /* z-index: -5;  cursor pointer not working ,why?*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%, center; /* not shire is ot okay*/
+    max-width: 100%;
+    background-image: url(../img/background_camera.png);
+}
+.logo-banner__inner{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+}
+.logo-banner__title{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    color: var(--textColor);
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 64px;
+    letter-spacing: 0.03em;
+    margin: 0px auto 16px;
+    padding-top: 227px;
+    
+}
+.logo-banner__text{
+    padding: 0px 0px 0px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 144%;
+    text-align: center;
+    color: var(--textColor);
+    max-width: 683px;
+    margin: 0 auto 32px;
+}
+.logo-banner__button{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px auto 128px;
+    text-decoration: none;
+    width: 262px;
+    padding: 16px;
+    background: var(--textColor);
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    color:var(--backgroundColor);
+}
+.logo-banner__arrow-down{
+    margin: 0px auto 0px;
+}
+@media(max-width: 1249px){
+    .logo-banner__title{
+        font-size: calc(40px + (64 - 40)*((100vw - 767px)/(1200 -767)));
+        line-height: calc(125% + (144 - 125)*((100vw - 767px)/(1200 -767)));
+    }
+    .logo-banner__button{
+        font-size: calc(14px + (18 - 14)*((100vw - 767px)/(1200 -767)));
+    }
+    .logo-banner__text{
+        font-size: calc(14px + (18 - 14)*((100vw - 767px)/(1200 -767)));
+    }
+    
+}
+@media (max-width: 767px){
+    .logo-banner{
+        background-image: url(../img/back_camera_phone.png);
+    }
+    .logo-banner__title{
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: 0.03em;
+        margin: 0px auto 0px;
+    }
+    .logo-banner__text{
+        display: none;
+    }
+    .logo-banner__button{
+        width: 189px;
+        height: 42px;
+        border: 1px solid var(--textColor);
+        box-sizing: border-box;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--textColor);
+        padding: 13px 12px 11px 12px;
+        margin: 32px auto;
+        background:none;
+    }
+}
+
+/*========================social-buttons__items (social-buttons)======================*/
+
+
+.social-buttons{
+    display: flex;
+    transform: rotate(-90deg);
+    position: fixed;
+    bottom: 55%;
+    right: -80px; 
+    z-index: 100;
+}
+.social-buttons__items{
+    font-family: 'Oswald',sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 167%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--textColor);
+    background:var(--backgroundColor);
+    text-decoration: none;
+    text-align: center;
+    margin: 0px 1px;
+    padding: 6px;
+}
+.social-buttons__items:hover{
+    font-weight: 500;
+    transition: all 0.3s ease;/*trigger on hower why*/
+}
+@media (max-width: 767px){
+    .social-buttons{
+        display: none;
+    }
+}
