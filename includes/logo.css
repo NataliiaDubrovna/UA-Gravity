@@ -100,38 +100,3 @@
         background:none;
     }
 }
-
-/*========================social-buttons__items (social-buttons)======================*/
-
-
-.social-buttons{
-    display: flex;
-    transform: rotate(-90deg);
-    position: fixed;
-    bottom: 55%;
-    right: -80px; 
-    z-index: 100;
-}
-.social-buttons__items{
-    font-family: 'Oswald',sans-serif;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 167%;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--textColor);
-    background:var(--backgroundColor);
-    text-decoration: none;
-    text-align: center;
-    margin: 0px 1px;
-    padding: 6px;
-}
-.social-buttons__items:hover{
-    font-weight: 500;
-    transition: all 0.3s ease;/*trigger on hower why*/
-}
-@media (max-width: 767px){
-    .social-buttons{
-        display: none;
-    }
-}

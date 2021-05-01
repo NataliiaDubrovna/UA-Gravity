@@ -1,0 +1,129 @@
+@import url(../includes/common.css);
+.films{
+    background-color: var(--backgroundColor);
+}
+.film_inner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.films_title{
+    font-family: 'Oswald',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+.film{
+    max-width: 1200px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
+}
+.film>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.film::before{
+    content: '';
+    background-image: url(../img/obscuration\ fir\ photo\ galary.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 102%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+.film__photo-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+.film__photo-pretitle{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+.film__photo-text{
+    position: relative;
+    font-family:'Oswald',sans-serif;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 34px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--textColor);
+    margin-bottom: 16px;
+}
+.film__title-bar{
+    width: 240.25px;
+    height: 1px;
+    background-color: var(--textColor);
+    margin-bottom: 16px;
+}
+.film__buttons{
+    background: var(--backgroundColor);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color:#FFFFFF;
+    border-top: 1px  solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 11px 16px;
+    cursor: pointer;
+    transition: all 0.3s  linear;
+}
+.film__buttons:hover{
+    box-shadow: inset 0 0 20px rgb(218 218 218 / 78%);
+    letter-spacing: 1px;
+}
+@media (max-width: 768px){
+    .films_title{
+        margin: 100px 0 24px 16px;
+    }
+    .film__photo-text{
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 0px;
+    }
+    .film__photo-pretitle{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 4px;
+    }
+    .film {
+        margin: 0px 16px 13px 16px;
+    }
+    .film__title-bar,
+    .film__buttons{
+        display: none;
+    }
+
+}
