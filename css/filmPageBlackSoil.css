@@ -1,10 +1,11 @@
 @import url(../includes/common.css);
+@import url(../includes/partners_reviews.css);
 
 .icons_block{
     display: none;
 }
 main{
-    /* background-color: var(--backgroundColor); */
+    overflow: hidden;
 }
 /*============ video ===================*/
 .video{
@@ -445,7 +446,7 @@ main{
         line-height: 34px;
     }
 }
-/*===================Anons=============*/
+/*=================== Anons =============*/
 .anons{
     background: black url(../img/cloud-back.png) no-repeat center;
     background-size: cover;
@@ -522,4 +523,8 @@ main{
         font-size: 24px;
         line-height: 32px;
     }
+}
+/*=================== review =============*/
+.reviews__1, .reviews__3 {  
+    background: #FFFFFF;
 }
