@@ -1,4 +1,9 @@
 @import url(../includes/common.css);
+.weight-600{
+    color: var(--textColor);
+    font-weight: 600;
+}
+
 .films{
     background-color: var(--backgroundColor);
 }

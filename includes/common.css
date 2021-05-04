@@ -86,10 +86,10 @@ h1{ margin: 0;}
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
 }
-.nav-list__link:hover,.nav-list__link:active{
+.nav-list__link:hover{
     color: var(--textColor);
     font-weight: 600;
-    transition: color 0.2s linear;
+    transition: color 0.3s linear;
 }
 .nav-list{
     padding: 24px 0px;

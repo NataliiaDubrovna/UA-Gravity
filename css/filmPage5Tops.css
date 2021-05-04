@@ -1,0 +1,122 @@
+@import url(../includes/common.css);
+@import url(../includes/video-film_info.css);
+@import url(../includes/participants.css);
+@import url(../includes/filmPartnes.css);
+@import url(../includes/partners_reviews.css);
+@import url(../includes/other-films.css);
+
+.icons_block{
+    display: none;
+}
+main{
+    overflow: hidden;
+}
+.duration-time{
+    display: none;
+}
+/*==============film-photo=================*/
+
+.film-photo{
+    padding: 110px 0 44px;
+    overflow: hidden;
+    background-color: var(--backgroundColor);
+}
+.film-photo__container{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.film-photo__container::before{
+    content: "";
+    background: linear-gradient(180deg, #010101 -17.5%, rgba(1, 1, 1, 0) 100%);
+    transform: rotate(-180deg);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+.film-photo__container>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.film-photo__arrows{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 27px;
+    margin-right: 52px;
+    cursor: pointer;
+}
+
+
+/*==================film-info==============*/
+
+.film-info__title {
+    padding: 0 0 0 80px;
+}
+.film-info__pretitle{
+    padding: 56px 0 32px 80px;
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+@media (max-width:766px){
+    .duration-time{
+        display: block;
+    }
+    .film-info__title {
+        padding: 12px 0 0 16px;
+    }
+    .film-info__pretitle{
+        font-size: 12px;
+        line-height: 20px;
+        padding: 16px 0 0 34px;
+
+    }
+}
+
+/*==================filmPartner==============*/
+
+.partners__logo-block {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 48px;
+    column-gap: 16px;
+}
+@media (max-width: 1200px){
+    .partner__logo {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (max-width: 768px){
+    .logo_idlo, .logo_hight, .logo_white_elefant{
+        display: none;
+    }
+    .partners__logo-block {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 29px;
+    }
+}
+@media (max-width: 500px){
+    .partner__logo {
+        width: 67px;
+        height: 67px;
+    }
+}
+@media (max-width: 355px){
+    .partner__logo {
+        width: 55px;
+        height: 55px;
+    }
+}
+/*==================Reviews==============*/
+.reviews__1, .reviews__3 {  
+    background: #FFFFFF;
+}

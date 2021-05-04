@@ -1,6 +1,9 @@
 @import url(../includes/common.css);
 
-
+.weight-600{
+    color: var(--textColor);
+    font-weight: 600;
+}
 /*================== galary-project BLOCK =====================*/
 .galary-progect__header{
     padding:  120px 0px 40px 0px;

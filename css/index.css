@@ -4,3 +4,8 @@
 @import url(../includes/information.css);
 @import url(../includes/logo.css);
 @import url(../includes/partners_reviews.css);
+
+.weight-600{
+    color: var(--textColor);
+    font-weight: 600;
+}

@@ -54,6 +54,10 @@
     font-size: 18px;
     line-height: 133%;
     color:var(--backgroundColor);
+    transition: all 0.3s linear;
+}
+.logo-banner__button:hover{
+    box-shadow: inset 0 0 20px rgb(0 0 0);
 }
 .logo-banner__arrow-down{
     margin: 0px auto 0px;
