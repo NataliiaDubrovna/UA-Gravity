@@ -10,43 +10,72 @@ if(iconMenu){
 }
 
 
-// var videoPlayButton,
-//   videoWrapper = document.getElementsByClassName('video-wrapper')[0],
-//     video = document.getElementsByTagName('video')[0],
-//     videoMethods = {
-//         renderVideoPlayButton: function() {
-//             if (videoWrapper.contains(video)) {
-//         this.formatVideoPlayButton()
-//                 video.classList.add('has-media-controls-hidden')
-//                 videoPlayButton = document.getElementsByClassName('video-overlay-play-button')[0]
-//                 videoPlayButton.addEventListener('click', this.hideVideoPlayButton)
 
-//             }
-//         },
 
-//         formatVideoPlayButton: function() {
-//             videoWrapper.insertAdjacentHTML('beforeend', '\
-//                 <svg  class="video-overlay-play-button"  width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">\
-//                     <path opacity="0.3" d="M44 77C62.2254 77 77 62.2254 77 44C77 25.7746 62.2254 11 44 11C25.7746 11 11 25.7746 11 44C11 62.2254 25.7746 77 44 77Z" fill="white"/>\
-//                     <path d="M55 44L38.5 33V55L55 44Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\
-//                 </svg>\
-//             ')
-//         },
+const gallery = document.querySelectorAll('.gallery .image'),
+previewBox =  document.querySelector('.preview-box');
+previewImg = previewBox.querySelector('.imgPop')
+closeIcon = previewBox.querySelector('.close')
+shadow = document.querySelector(".shadow")
+header = document.querySelector('header')
 
-//         hideVideoPlayButton: function() {
-//             // video.play()
-//             // videoPlayButton.classList.add('is-hidden')
-//             videoPlayButton.classList.toggle('is-hidden')
+window.onload = ()=>{
+    for (let i = 0; i < gallery.length; i++){
+        let newIndex = i;
+        let clickImgIndex;
+        gallery[i].onclick = ()=>{
+            clickImgIndex = newIndex;
+            console.log(i);
 
-//             // video.classList.remove('has-media-controls-hidden')
-//             video.classList.toggle('has-media-controls-hidden')
+            function preview(){
+                let selectedImgUrl = gallery[newIndex].querySelector("img").src;
+                previewImg.src = selectedImgUrl;
+                console.log(selectedImgUrl);
+            }
 
-//             // video.setAttribute('controls', 'controls')
-//             video .toggleAttribute('controls', 'controls')
-//             if(videoPlayButton.classList.contains('is-hidden')){
-//                 video.play()
-//             }
-//         }
-//   }
+            const prevBtn = document.querySelector(".prev")
+            const nextBtn = document.querySelector(".next")
+            if(newIndex == 0){
+                prevBtn.style.display = "none";
+            }
+            if(newIndex >= gallery.length - 1){
+                nextBtn.style.display = "none";
+            }
+            prevBtn.onclick = () =>{
+                newIndex--;
+                if(newIndex == 0){
+                    preview();
+                    prevBtn.style.display = "none";
+                }else{
+                    preview();
+                    nextBtn.style.display = "block";
+                }
+            }
+            nextBtn.onclick = () =>{
+                newIndex++;
+                if(newIndex >= gallery.length - 1){
+                    preview();
+                    nextBtn.style.display = "none";
+                }else{
+                    preview();
+                    prevBtn.style.display = "block";
+                }
+            }
+            preview();
+            previewBox.classList.add('show');
+            shadow.style.display = "block";
+            document.querySelector("body").style.overflow = "hidden";
+            header.style.display = "none"
 
-// videoMethods.renderVideoPlayButton()
+            closeIcon.onclick = ()=>{
+                newIndex = clickImgIndex;
+                prevBtn.style.display = "block";
+                nextBtn.style.display = "block";
+                previewBox.classList.remove('show');
+                shadow.style.display = "none";
+                header.style.display = "block";
+                document.querySelector("body").style.overflow = "visible";
+            }
+        }
+    }
+}

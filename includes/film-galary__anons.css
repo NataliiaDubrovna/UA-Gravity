@@ -3,6 +3,7 @@
 .film-galary{
     padding: 120px 0;
     background-color: var(--backgroundColor);
+    position: relative;
 }
 .film-galary__button{
     display: none;
@@ -21,11 +22,22 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: relative;
+    cursor: pointer;
 }
 .film-photo>img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.film-photo:hover::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, #010101 -16.15%, rgba(1, 1, 1, 0) 104.17%);
+    opacity: 0.8;
 }
 .film-galary__grid>div:first-of-type{
     grid-column-start: span 2;
@@ -38,7 +50,83 @@
     grid-auto-flow: dense;
 }
 
+.preview-box{
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    padding: 108px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 5;
+}
+.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.preview-box .img-box{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 5;
+    max-width: 1200px;
+}
+.imgPop__wrapper{
+    width: 100%;
+    max-height: 680px;
+    overflow: hidden;
+}
+.imgPop__wrapper>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.arrow__gallery{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+.arrow__gellery .arrow__left-white{
+    margin-right: 56px;
+}
+.slide{
+    cursor: pointer;
+}
+.close{
+    margin-left: auto;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+.close>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #010101;
+    opacity: 0.95;
+    display: none;
+}
+
+
 @media (max-width:766px){
+    .preview-box{
+        height: 100%;
+    }
     .film-galary{
         padding: 56px 16px;
     }
